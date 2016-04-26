@@ -117,3 +117,4 @@ text_read.py
 *test*
 py/password_hash/.idea
 */.idea
+config/database.yml
