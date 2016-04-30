@@ -1,0 +1,17 @@
+# encoding: UTF-8
+
+default: &default
+  port: 5432
+  host: localhost
+
+development: &development
+  <<: *default
+  database:
+  username:
+  password:
+
+test: &test
+  <<: *development
+
+production: &production
+  <<: *development
