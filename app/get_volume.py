@@ -1,6 +1,7 @@
 import tushare as ts
 import psycopg2
 from sqlalchemy import create_engine
+
 from yaml import load
 
 try:
@@ -26,4 +27,5 @@ r = cur.fetchall()
 for row in r:
     print('获取 ' + row[0] + '的历史行情')
     d = ts.get_hist_data(row[0])
+    d['code'] = row[0]
     d.to_sql('hist_data', engine, if_exists='append')
