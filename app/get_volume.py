@@ -17,6 +17,10 @@ HOST = db_config['production']['host']
 PASSWORD = db_config['production']['password']
 DATABASE = db_config['production']['database']
 
+hist_data_type = {
+    'date': DATE,
+    'code': CHAR(6)
+}
 
 
 
