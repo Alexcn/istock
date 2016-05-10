@@ -17,10 +17,6 @@ HOST = db_config['production']['host']
 PASSWORD = db_config['production']['password']
 DATABASE = db_config['production']['database']
 
-hist_data_type = {
-    'date': DATE,
-    'code': CHAR(6)
-}
 
 
 
@@ -31,12 +27,21 @@ conn = psycopg2.connect(host=db_config['production']['host'], database=db_config
 
 cur = conn.cursor()
 
+
+# 获取历史数据,存到数据库
+hist_data_type = {
+    'date': DATE,
+    'code': CHAR(6)
+}
 cur.execute('select distinct code from stock_basics;')
 
 r = cur.fetchall()
 
 for row in r:
-    print('获取 ' + row[0] + '的历史行情')
-#    d = ts.get_hist_data(row[0])
-#    d['code'] = row[0]
-#    d.to_sql('hist_data', engine, if_exists='append')
+    print('获取 ' + row[0] + ' 的历史行情')
+    d = ts.get_hist_data(row[0])
+    d['code'] = row[0]
+    d.to_sql('hist_data', engine, if_exists='append', dtype=hist_data_type)
+
+
+
