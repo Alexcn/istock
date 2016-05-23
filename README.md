@@ -7,3 +7,5 @@ istock 是一个抓取沪深股市的行情，并按照个人的喜好进行分�
 - tushare
 - pandas
 - sqlalchemy
+- PyYAML
+- psycopg2
