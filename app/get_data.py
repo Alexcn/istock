@@ -1,6 +1,5 @@
 import tushare as ts
 import psycopg2
-from sqlalchemy import create_engine
 from sqlalchemy.dialects.postgresql import *
 
 from yaml import load
