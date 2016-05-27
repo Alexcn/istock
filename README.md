@@ -9,3 +9,17 @@ istock 是一个抓取沪深股市的行情，并按照个人的喜好进行分�
 - sqlalchemy
 - PyYAML
 - psycopg2
+
+### 配置项目
+
+请确保已经安装 PostgreSQL 数据库，并处于运行状态。如果没有数据库，也可以使用部分功能，不过无法持久化数据，无法对数据进行持续分析。以 *nix 系统为例：
+
+```shell
+$ git clone https://github.com/itpubs/istock.git
+```
+- 配置数据库
+
+```shell
+$ cd istock/config
+$ cp database_sample.yml database.yml  # 输入数据库名、用户名、端口号
+```
