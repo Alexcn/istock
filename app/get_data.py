@@ -10,6 +10,7 @@ except:
     from yaml import Loader
 data_stream = open('../config/database.yml', 'r')
 db_config = load(data_stream, Loader=Loader)
+data_stream.close()
 
 USER = db_config['production']['username']
 HOST = db_config['production']['host']
