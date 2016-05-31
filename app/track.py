@@ -10,6 +10,9 @@ except:
 # code here
 
 
-data_stream = open('../config/database.yml', 'r')
-db_config = load(data_stream, Loader=Loader)
-data_stream.close()
+config_stream = open('../config/config.yml', 'r')
+config = load(data_stream, Loader=Loader)
+config_stream.close()
+
+
+
