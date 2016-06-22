@@ -120,3 +120,4 @@ py/password_hash/.idea
 config/database.yml
 config/track.yml
 venv
+tmp
