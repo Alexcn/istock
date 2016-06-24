@@ -3,35 +3,26 @@ istock 是一个抓取沪深股市的行情，并按照个人的喜好进行分�
 
 ## 技术依赖
 
-建议使用 Python3.3+ 的版本，PostgreSQL 9.2 以上的数据库。
+建议使用 Python3.3+ 的版本，PostgreSQL 9.2 以上的数据库。请确保已经安装 PostgreSQL 数据库，并处于运行状态。如果没有数据库，也可以使用部分功能，不过无法持久化数据，无法对数据进行持续分析。
+
 
 ### 配置项目
 
-- 取下项目代码
+- 初始化环境
 
 ```shell
 $ git clone https://github.com/itpubs/istock.git
-```
-
-- 环境配置,在项目根目录下执行如下命令
-
-```shell
+$ cd istock
 $ pyenv venv
 $ source venv/bin/activate
-```
-
-- 安装第三方的依赖模块
-
-```shell
 $ pip install -r requirements.txt
 ```
 
-- 初始化项目
+- 配置项目
 
 ```shell
 $ ./run.py --init
 ```
 
-请确保已经安装 PostgreSQL 数据库，并处于运行状态。如果没有数据库，也可以使用部分功能，不过无法持久化数据，无法对数据进行持续分析。以 *nix 系统为例：
 
 
