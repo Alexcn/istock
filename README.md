@@ -16,7 +16,7 @@ $ git clone https://github.com/itpubs/istock.git
 - 环境配置,在项目根目录下执行如下命令
 
 ```shell
-$ pyenv venv
+$ pyvenv venv
 $ source venv/bin/activate
 ```
 
