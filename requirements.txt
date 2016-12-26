@@ -5,3 +5,4 @@ PyYAML==3.11
 SQLAlchemy==1.0.12
 tushare==0.4.7
 virtualenv==14.0.5
+requests
