@@ -3,7 +3,7 @@
 
 import tushare as ts
 
-stock_basic_info = ts.get_stock_basics()
+stock_basic_info = ts.get_stock_basics().index
 
 for item in stock_basic_info:
     print(item)
